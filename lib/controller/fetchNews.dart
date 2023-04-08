@@ -53,7 +53,7 @@ class FetchNews {
     var sourceID = sourcesId[_random.nextInt(sourcesId.length)];
    
     Response response = await get(Uri.parse(
-        "https://newsapi.org/v2/top-headlines?sources=$sourceID&apiKey=caea254bf2f94f869e831ec24284ece1"));
+        "https://newsapi.org/v2/top-headlines?sources=$sourceID&apiKey=f05f13a5b487475f838d0fd6af8096a0"));
 
     Map body_data = jsonDecode(response.body);
     List articles = body_data["articles"];
@@ -65,3 +65,6 @@ class FetchNews {
     return NewsArt.fromAPItoApp(myArticle);
   }
 }
+
+//f05f13a5b487475f838d0fd6af8096a0
+//caea254bf2f94f869e831ec24284ece1

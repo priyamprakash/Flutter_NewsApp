@@ -29,26 +29,26 @@ class NewsContainer extends StatelessWidget {
             placeholder: "assets/img/placeholder.jfif",
             image: imgUrl),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Text(
               newsHead.length > 90
                   ? "${newsHead.substring(0, 90)}..."
                   : newsHead,
-              style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Text(
               newsDes,
-              style: TextStyle(fontSize: 12, color: Colors.black38),
+              style: const TextStyle(fontSize: 12, color: Colors.black38),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Text(
@@ -57,11 +57,11 @@ class NewsContainer extends StatelessWidget {
                       ? newsCnt.substring(0, 250)
                       : "${newsCnt.toString().substring(0, newsCnt.length - 15)}..."
                   : newsCnt,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ]),
         ),
-        Spacer(),
+        const Spacer(),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -75,7 +75,7 @@ class NewsContainer extends StatelessWidget {
                             builder: (context) =>
                                 DetailViewScreen(newsUrl: newsUrl)));
                   },
-                  child: Text("Read More")),
+                  child: const Text("Read More")),
             ),
           ],
         ),
@@ -84,12 +84,12 @@ class NewsContainer extends StatelessWidget {
                 onPressed: () async {
                   await launchUrl(Uri.parse("https://newsapi.org/"));
                 },
-                child: Text(
+                child: const Text(
                   "News Provided By NewsAPI.org",
                   style: TextStyle(fontSize: 12),
                   textAlign: TextAlign.center,
                 ))),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
       ]),
